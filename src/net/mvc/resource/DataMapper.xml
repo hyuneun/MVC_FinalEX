@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pro">
+
+ <select id="getUserbuser" resultType="dto">
+  select * from buser
+ </select>
+ 
+ <select id="findsawon" resultType="net.mvc.model.SawonDto" parameterType="String">
+  select * from sawon where buser_num=#{buser_no}
+ </select>
+ 
+ <select id="findgogek" resultType="net.mvc.model.GogekDto">
+  select * from gogek
+ </select>
+ 
+</mapper>
